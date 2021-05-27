@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+/* universal selector */
+* {
+    box-sizing: border-box; 
+    /* if you add any padding/border onto it, it doesn't affect the width of it  */
+}
+
+:root {
+    --border-color: #a98a75;
+    --tank-color: #023e8a;
+}
+
+body {
+    background-color: #e6ffec;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 1.7rem;
+    padding: 40px;
+    margin: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h3 {
+    margin: 0;
+}
+
+.plant-icon {
+    font-size: 2rem;
+    display: block;
+}
+
+.water-tank {
+    background-color: white;
+    border: 4px solid var(--tank-color);
+    color: var(--tank-color);
+    border-radius: 0 0 40px 40px;
+    height: 300px;
+    width: 400px;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.yard-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.yard {
+    background-color: white;
+    border: 2px solid var(--border-color);
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space;
+    margin-bottom: 20px;
+}
+
+.plant {
+    border: 2px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1;
+}
+
+.plant:hover {
+    background-color:#bde0fe ;
+    cursor: pointer;
+}
+
+
+.yard .grass {
+    height: 200px;
+    flex: 2;
+    flex-basis: 300px;
+}
+
+.yard .flower, .yard .fruit {
+    height: 100px;
+    flex: 1;
+    
+}
+
+.yard.non-grass-plant {
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+
+
+
+
