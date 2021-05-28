@@ -15,7 +15,7 @@ body {
     background-color: #e6ffec;
     font-family: 'Nanum Pen Script', cursive;
     font-size: 1.7rem;
-    padding: 40px;
+    padding: 60px;
     margin: 0;
 }
 
@@ -36,7 +36,7 @@ h1, h3 {
 }
 
 .water-tank {
-    background-color: white;
+    
     border: 4px solid var(--tank-color);
     color: var(--tank-color);
     border-radius: 0 0 40px 40px;
@@ -45,12 +45,22 @@ h1, h3 {
     margin: 30px 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    overflow: hidden;
+}
+
+#remaining {
+    background-color: #b4d9fc;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+
 }
 
 .yard-wrapper {
     width: 100%;
+    margin-top: 30px;
     display: flex;
     justify-content: space-around;
     text-align: center;
@@ -74,13 +84,76 @@ h1, h3 {
     align-items: center;
     justify-content: center;
     flex-shrink: 1;
+    user-select: none;
 }
 
 .plant:hover {
-    background-color:#bde0fe ;
     cursor: pointer;
 }
 
+.plant:hover .plant-icon {
+    transform: translateY(-10px);
+    transition: 200ms ease-in;
+}
+
+.grass:hover {
+    color: yellowgreen;
+}
+
+.flower:hover {
+    color:#ff0a54;
+}
+
+.fruit:hover {
+    color: #ff6b35 ;
+}
+
+
+
+.watered-basic {
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: transparent; 
+}
+
+
+.lemon.watered {
+    background: url("https://images.unsplash.com/photo-1605185189315-fc269c231e41?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: transparent;
+   
+}
+
+.tulip.watered {
+    background: url("https://images.unsplash.com/photo-1557086815-b3f1af5fbc1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2250&q=80");
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: transparent;
+}
+
+.sunflower.watered {
+    background: url("https://images.unsplash.com/photo-1594830564484-506911d0f97b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80https://images.unsplash.com/photo-1594830564484-506911d0f97b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: transparent; 
+}
+
+.grass.watered {
+    background: url("https://images.unsplash.com/photo-1508550536558-5e8d33eb9a82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1488&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+}
+
+.strawberry.watered {
+    background: url("https://images.unsplash.com/photo-1519180392711-496e450edf6a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+}
 
 .yard .grass {
     height: 200px;
@@ -91,15 +164,23 @@ h1, h3 {
 .yard .flower, .yard .fruit {
     height: 100px;
     flex: 1;
-    
 }
 
 .yard.non-grass-plant {
     display: flex;
     flex-direction: row;
-
 }
 
+
+.percentage {
+    background-color:white;
+    transition: 300ms ease;
+    font-size: 1.5rem;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
 
 
 
